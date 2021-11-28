@@ -1,4 +1,4 @@
-# Diabetic Prediction using Machine Learning
+# Diabetes Prediction using Machine Learning
  
 
 - The repository contains Files required to deploy **Machine Learning web app** using **Flask API** in **Heroku platform**
