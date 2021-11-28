@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+input[type=text], select, textarea {
+  width: 20%;
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  resize: vertical;
+}
+.center {
+  text-align: center;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contain { 
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+</style>
+<body>
+
+<div class="container d-flex justify-content-center p-3 my-3 bg-dark text-white">
+     <h1>Diabetes Prediction</h1>
+</div>
+<div class= "center">
+<div class= "contain">
+    <form action="{{url_for('predict')}}" method = "post">
+      <label for="Pre">Pregnancies</label><br>
+      <input type="text" id="Pre" name="Pre"><br>
+      
+      <label for="Glu">Glucose</label><br>
+      <input type="text" id="Glu" name="Glu"><br>
+      
+      <label for="BP">Blood Pressure</label><br>
+      <input type="text" id="BP" name="BP"><br>
+      
+      <label for="ST">Skin Thickness</label><br>
+      <input type="text" id="ST" name="ST"><br>
+      
+      <label for="Ins">Insulin</label><br>
+      <input type="text" id="Ins" name="Ins"><br>
+      
+      <label for="BMI">BMI</label><br>
+      <input type="text" id="BMI" name="BMI"><br>
+      
+      <label for="DPF">Diabetes Pedigree Function</label><br>
+      <input type="text" id="DPF" name="DPF"><br>
+      
+      <label for="Age">Age</label><br>
+      <input type="text" id="Age" name="Age"><br>
+      
+      <input type="submit" value="Predict"><br>
+      
+    </form>
+</div>
+</div>
+
+<div class="container d-flex justify-content-center p-3 my-3 bg-dark text-white">
+<h2>{{prediction}}</h2>
+</div>
+
+
+</body>
+</html>
